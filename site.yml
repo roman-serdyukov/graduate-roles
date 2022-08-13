@@ -4,24 +4,24 @@
 - name: Install reverse proxy
   hosts: yc-reverse-nginx
   roles:
-    - { role: reverse-proxy-nginx,  when: ansible_lsb.id == 'Ubuntu' }
+    - reverse-proxy-nginx
 
 - name: Install mysql server
   hosts: yc-mysql
   roles:
-    - { role: reverse-proxy-nginx, when: ansible_lsb.id == 'Ubuntu' }
+    - db-mysql-role
 
 - name: Install apps server
   hosts: yc-apps
   roles:
-    - { role: apps-server-role, when: ansible_lsb.id == 'Ubuntu' }
+    - apps-server-role
 
 - name: Install gitlab ci
   hosts: yc-gitlab-ci
   roles:
-    - { role: gitlab-ci-role, when: ansible_lsb.id == 'Ubuntu' }
+    - gitlab-ci-role
 
 - name: Install prometheus/grafana/alertmanager
   hosts: all
   roles:
-    - { role: monitoring-role, when: ansible_lsb.id == 'Ubuntu' }
+    - monitoring-role
