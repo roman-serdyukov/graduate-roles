@@ -1,0 +1,6 @@
+ubuntu-gitlab-ci:
+  hosts:
+    u-server-test:
+      ansible_connection: ssh
+    ubuntu-test:
+      ansible_connection: ssh

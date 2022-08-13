@@ -1,0 +1,27 @@
+---
+# Start role monitoring
+
+- name: Install reverse proxy
+  hosts: yc-reverse-nginx
+  roles:
+    - { role: reverse-proxy-nginx,  when: ansible_lsb.id == 'Ubuntu' }
+
+- name: Install mysql server
+  hosts: yc-mysql
+  roles:
+    - { role: reverse-proxy-nginx, when: ansible_lsb.id == 'Ubuntu' }
+
+- name: Install apps server
+  hosts: yc-apps
+  roles:
+    - { role: apps-server-role, when: ansible_lsb.id == 'Ubuntu' }
+
+- name: Install gitlab ci
+  hosts: yc-gitlab-ci
+  roles:
+    - { role: gitlab-ci-role, when: ansible_lsb.id == 'Ubuntu' }
+
+- name: Install prometheus/grafana/alertmanager
+  hosts: all
+  roles:
+    - { role: monitoring-role, when: ansible_lsb.id == 'Ubuntu' }

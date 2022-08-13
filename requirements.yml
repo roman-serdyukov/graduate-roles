@@ -1,0 +1,25 @@
+---
+- name: reverse-proxy-role
+  src: git@github.com:roman-serdyukov/reverse-proxy-role.git
+  scm: git
+  version: "v1.0.0"
+
+- name: db-mysql-role
+  src: git@github.com:roman-serdyukov/db-mysql-role.git
+  scm: git
+  version: "v1.0.0"
+
+- name: apps-server-role
+  src: git@github.com:roman-serdyukov/apps-server-role.git
+  scm: git
+  version: "v1.0.0"
+
+- name: gitlab-ci-role
+  src: git@github.com:roman-serdyukov/gitlab-ci-role.git
+  scm: git
+  version: "v1.0.0"
+
+- name: monitoring-role
+  src: git@github.com:roman-serdyukov/monitoring-role.git
+  scm: git
+  version: "v1.0.0"
