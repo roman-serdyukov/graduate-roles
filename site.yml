@@ -4,7 +4,7 @@
 - name: Install reverse proxy
   hosts: yc-reverse-nginx
   roles:
-    - reverse-proxy-nginx
+    - reverse-proxy-role
 
 - name: Install mysql server
   hosts: yc-mysql
