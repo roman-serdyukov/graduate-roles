@@ -1,6 +1,40 @@
-ubuntu-gitlab-ci:
+yc-apps:
   hosts:
-    u-server-test:
+    www.reserdukov.ru:
       ansible_connection: ssh
-    ubuntu-test:
+      ansible_port: "22053"
+     
+yc-mysql:
+  hosts:
+    db1.reserdukov.ru:
       ansible_connection: ssh
+      ansible_port: "22313"
+    db2.reserdukov.ru:
+      ansible_connection: ssh
+      ansible_port: "22314"
+
+yc-gitlab-ci:
+  hosts:
+    gitlab.reserdukov.ru:
+      ansible_connection: ssh
+      ansible_port: "22063"
+    runner.reserdukov.ru:
+      ansible_connection: ssh
+      ansible_port: "22064"
+
+yc-reverse-nginx:
+  hosts:
+    reserdukov.ru:
+      ansible_connection: ssh
+
+yc-monitoring:
+  hosts:
+    monitoring.reserdukov.ru:
+      ansible_connection: ssh
+      ansible_port: "22083"
+
+
+
+
+
+
