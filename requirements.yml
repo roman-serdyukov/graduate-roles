@@ -17,7 +17,7 @@
 - name: gitlab-ci-role
   src: git@github.com:roman-serdyukov/gitlab-ci-role.git
   scm: git
-  version: "v1.0.2"
+  version: "v1.0.3"
 
 - name: monitoring-role
   src: git@github.com:roman-serdyukov/monitoring-role.git
