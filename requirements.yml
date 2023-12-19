@@ -12,7 +12,7 @@
 - name: apps-server-role
   src: git@github.com:roman-serdyukov/apps-server-role.git
   scm: git
-  version: "v1.0.2"
+  version: "v1.1.2"
 
 - name: gitlab-ci-role
   src: git@github.com:roman-serdyukov/gitlab-ci-role.git
